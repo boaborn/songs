@@ -6,7 +6,16 @@ const SongDetail = (props) => {
   if(!song) {
     return <div>Select a song</div>
   }
-  return <div>{song.title}</div>
+  return (
+    <div>
+      <h3>Details for:</h3>
+      <p>
+        Title: {song.title}
+        <br/>
+        Duration: {song.duration}
+      </p>
+    </div>
+  )
 }
 
 const mapStateToProps = (state) => {
